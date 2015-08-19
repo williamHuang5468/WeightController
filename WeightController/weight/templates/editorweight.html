@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>editorWeight</title>
+	</head>
+	<body>
+		<form method="POST">
+			<input name="weightInput" id ="weightInput" placeholder="Enter your weights"/>
+			{% csrf_token %}
+		</form>
+		<table id ="id_list_table">
+			<td>
+				1: {{ new_weight }}
+			</td>
+		</table>
+	</body>
+</html>
