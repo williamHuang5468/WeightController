@@ -13,8 +13,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Weight',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('weight', models.TextField(default='')),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('weight', models.IntegerField(default='')),
+                ('record_date', models.DateTimeField(verbose_name='date record')),
             ],
         ),
     ]

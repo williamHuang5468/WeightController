@@ -8,9 +8,13 @@
 			{% csrf_token %}
 		</form>
 		<table id ="id_list_table">
-			<td>
-				1: {{ new_weight }}
-			</td>
+			{% for item in new_weight %}
+				<tr>
+					<td>
+						{{forloop.counter}}:{{item.weight}}
+					</td>
+				</tr>
+			{% endfor %}
 		</table>
 	</body>
 </html>

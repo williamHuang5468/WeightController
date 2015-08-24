@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Weight
+
+class WeightAdmin(admin.ModelAdmin):
+	list_display = ('weight', 'record_date')
+
+admin.site.register(Weight, WeightAdmin)
